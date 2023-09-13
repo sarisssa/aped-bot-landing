@@ -1,3 +1,8 @@
+import discord from "../assets/Footer/discord.svg";
+import medium from "../assets/Footer/medium.svg";
+import twitter from "../assets/Footer/twitter.svg";
+// import Logo from "./assets/Footer/logo.svg";
+
 const Footer = () => {
   return (
     <div className="bg-[url('./assets/Footer/footer.svg')] md:bg-[url('./assets/Footer/footer.svg')] bg-cover bg-center flex flex-col justify-center items-center h-screen relative">
@@ -8,13 +13,17 @@ const Footer = () => {
         </div>
         <div className="flex flex-row items-center mt-[25px] justify-center">
           <a href="#">
-            <img alt="" className="w-[40px] h-[32px]"></img>
+            <img src={medium} alt="" className="w-[40px] h-[32px]"></img>
           </a>
           <a href="https://discord.com/invite/FbFjCz4PAR" className="ml-[20px]">
-            <img alt="" className="w-[42px] h-[42px]"></img>
+            <img src={discord} alt="" className="w-[42px] h-[42px]"></img>
           </a>
           <a href="https://twitter.com/aped_xyz">
-            <img alt="" className="ml-[23px] w-[40px] h-[34px]"></img>
+            <img
+              src={twitter}
+              alt=""
+              className="ml-[23px] w-[40px] h-[34px]"
+            ></img>
           </a>
         </div>
 

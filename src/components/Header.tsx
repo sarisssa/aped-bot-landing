@@ -5,7 +5,7 @@ const HeaderNav = () => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
 
   return (
-    <div className="header fixed top-0 left-0 right-0 z-[100] bg-black py-[13px]">
+    <div className="header fixed top-0 left-0 right-0 z-[100] bg-black py-[13px] text-white">
       <nav>
         <div
           className={` flex flex-wrap items-center justify-between ${
@@ -52,7 +52,7 @@ const HeaderNav = () => {
             <ul className="font-medium flex flex-col  md:p-0 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
               {!navbarOpen ? (
                 <div className="bg-black flex flex-row gap-[30px]">
-                  <li className="w-[105px] text-center h-[32px] border-[#AEAEAE] border-[1px] border-opacity-80 rounded-[15px] flex items-center justify-center bg-[#1A1A1A] font-bold uppercase">
+                  <li className="w-[105px] text-center h-[32px] border-button border-[1px] border-opacity-80 rounded-[15px] flex items-center justify-center bg-[#1A1A1A] font-bold uppercase">
                     <a
                       href="https://aped-xyz.gitbook.io/litepaper"
                       className="text-white"
@@ -61,7 +61,7 @@ const HeaderNav = () => {
                     </a>
                   </li>
 
-                  <li className="w-[105px] text-center text-[16px] border-[#AEAEAE] border-[1px] border-opacity-80 rounded-[15px] flex items-center justify-center bg-[#1A1A1A] font-bold uppercase">
+                  <li className="w-[105px] text-center text-[16px] border-button border-[1px] border-opacity-80 rounded-[15px] flex items-center justify-center bg-[#1A1A1A] font-bold uppercase">
                     <a href="/contacts" className="text-white">
                       docs
                     </a>
