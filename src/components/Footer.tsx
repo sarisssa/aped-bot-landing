@@ -1,7 +1,8 @@
 import discord from "../assets/Footer/discord.svg";
 import medium from "../assets/Footer/medium.svg";
 import twitter from "../assets/Footer/twitter.svg";
-// import Logo from "./assets/Footer/logo.svg";
+
+//gap 3em
 
 const Footer = () => {
   return (

@@ -5,11 +5,14 @@ interface Props {
 export default function FeatureButton({ imageURL, text }: Props) {
   return (
     <div className="flex my-3 pl-3 min-w-[10vw] rounded-md">
-      <div className="bg-container">
-        {" "}
-        <img src={imageURL} alt="" />
-      </div>
-      <button className="text-left py-3 w-[20vw]">{text}</button>
+      <button className="bg-transparent text-left w-[50vw] md:w-[20vw] flex items-center gap-[1rem] text-sm font-bold">
+        <div className="bg-container">
+          <img className="w-[35px]" src={imageURL} alt="" />
+        </div>
+        {text}
+      </button>
     </div>
   );
 }
+// Add bg colour to <button>
+//OR TRANSPARENT

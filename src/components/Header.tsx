@@ -5,7 +5,7 @@ const HeaderNav = () => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
 
   return (
-    <div className="header fixed top-0 left-0 right-0 z-[100] bg-black py-[13px] text-white">
+    <div className="header fixed top-0 left-0 right-0 z-[100] bg-container py-[13px] text-white">
       <nav>
         <div
           className={` flex flex-wrap items-center justify-between ${

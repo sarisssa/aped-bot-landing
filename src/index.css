@@ -63,6 +63,13 @@ button:focus-visible {
   font-family: "Barlow", sans-serif;
 }
 
+#entire-website-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -73,5 +80,55 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+#root {
+  width: 100%;
+  max-width: inherit;
+  margin: inherit;
+  padding: inherit;
+  text-align: inherit;
+}
+
+.header-banner {
+  position: relative;
+  margin-top: 64px;
+  height: 300px;
+}
+
+.header-banner-svg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header-banner-svg svg {
+  width: 100%;
+  height: auto;
+}
+
+.header-banner-text {
+  padding-top: 12%;
+}
+
+.header-banner-img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header-banner {
+    height: 550px;
+  }
+  .header-banner-img {
+    max-height: 550px;
+  }
+  .header-banner-img {
+    display: block;
   }
 }
