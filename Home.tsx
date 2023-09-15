@@ -7,6 +7,7 @@ import bestAssetPrice from "./src/assets/PersonalizedTradingContainer/best-asset
 import lowestFees from "./src/assets/PersonalizedTradingContainer/lowest-fees.svg";
 import perpAggregator from "./src/assets/PersonalizedTradingContainer/perp-aggregator.svg";
 
+import mobileABB from "./src/assets/ApedBotBackground/mobileBackground.png";
 import ABB from "./src/assets/ApedBotBackground/picture.png";
 import ApedBanana from "./src/assets/Leaderboard/apedBanana";
 import FeatureButton from "./src/components/FeatureButton";
@@ -42,6 +43,7 @@ export default function Home() {
         </div>
         <img className="header-banner-img" src={ABB} alt="" />
       </div>
+      <img className="mobile-only" src={mobileABB} alt="" />
       <div
         id="entire-website-container"
         className="flex flex-col gap-10 md:gap-20 bg-black max-w-[1280px]"

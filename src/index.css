@@ -97,6 +97,12 @@ button:focus-visible {
   height: 300px;
 }
 
+@media screen and (max-width: 768px) {
+  .header-banner {
+    margin-top: 10rem; /* Apply a margin-top of 150px on screens with a maximum width of 768px (typical mobile screens) */
+  }
+}
+
 .header-banner-svg {
   width: 100%;
   position: absolute;
@@ -119,6 +125,28 @@ button:focus-visible {
   top: 0;
   left: 0;
   display: none;
+}
+
+.mobile-only {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .mobile-only {
+    display: block; /* Show the div on screens with a maximum width of 768px (adjust this as needed) */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #entire-website-container {
+    margin-top: 10em;
+  }
 }
 
 @media (min-width: 768px) {
