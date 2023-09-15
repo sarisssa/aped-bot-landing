@@ -1,48 +1,25 @@
-import "./App.css";
+import discordBot from "./src/assets/TradeOnGoContainer/discord-bot.svg";
+import limitOrders from "./src/assets/TradeOnGoContainer/limit-orders.svg";
+import marketOrders from "./src/assets/TradeOnGoContainer/market-orders.svg";
 
-import discordBot from "./assets/TradeOnGoContainer/discord-bot.svg";
-import limitOrders from "./assets/TradeOnGoContainer/limit-orders.svg";
-import marketOrders from "./assets/TradeOnGoContainer/market-orders.svg";
+import assetVariety from "./src/assets/PersonalizedTradingContainer/asset-variety.svg";
+import bestAssetPrice from "./src/assets/PersonalizedTradingContainer/best-asset-price.svg";
+import lowestFees from "./src/assets/PersonalizedTradingContainer/lowest-fees.svg";
+import perpAggregator from "./src/assets/PersonalizedTradingContainer/perp-aggregator.svg";
 
-import assetVariety from "./assets/PersonalizedTradingContainer/asset-variety.svg";
-import bestAssetPrice from "./assets/PersonalizedTradingContainer/best-asset-price.svg";
-import lowestFees from "./assets/PersonalizedTradingContainer/lowest-fees.svg";
-import perpAggregator from "./assets/PersonalizedTradingContainer/perp-aggregator.svg";
+import ABB from "./src/assets/ApedBotBackground/picture.png";
+import ApedBanana from "./src/assets/Leaderboard/apedBanana";
+import FeatureButton from "./src/components/FeatureButton";
+import LeaderBoardRow from "./src/components/LeaderBoardRow";
+import { traderData } from "./src/mock";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "../Home";
-import PrivatePolicyScreen from "../PrivatePolicyScreen";
-import TermsofServiceScreen from "../TermsofServiceScreen";
-import ABB from "./assets/ApedBotBackground/picture.png";
-import ApedBanana from "./assets/Leaderboard/apedBanana";
-import FeatureButton from "./components/FeatureButton";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import LeaderBoardRow from "./components/LeaderBoardRow";
-import { traderData } from "./mock";
-
-function App() {
+export default function Home() {
   const navigatetoTrade = () => {
     window.open("https://t.me/ApedTrad", "_blank");
   };
 
   return (
-    <div className="App">
-      <Header />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="private-policy" element={<PrivatePolicyScreen />} />{" "}
-          <Route path="terms-of-service" element={<TermsofServiceScreen />} />{" "}
-        </Routes>
-      </BrowserRouter>
-      <Footer />
-    </div>
-  );
-
-  return (
     <>
-      <Header />
       <div className="header-banner font-sans">
         <div
           id="black-circle"
@@ -255,14 +232,7 @@ function App() {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
-
-export default App;
-
-//Polish
-
-//Make header font size smaller
-//Circle size BIGGER + BOLDER (first two)

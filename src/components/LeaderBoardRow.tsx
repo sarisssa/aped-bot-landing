@@ -14,7 +14,7 @@ export default function LeaderBoardRow({ traderData }: Props) {
       <span>{rank}</span>
       <span>{traderName}</span>
       <span>{PNL}</span>
-      <div className="flex">
+      <div className="flex flex-row items-center">
         <span>{points}</span>
         <ApedBanana />
       </div>

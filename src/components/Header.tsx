@@ -5,10 +5,10 @@ const HeaderNav = () => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
 
   return (
-    <div className="header fixed top-0 left-0 right-0 z-[100] bg-container py-[13px] text-white">
+    <div className="header fixed top-0 left-0 right-0 z-[100] bg-black py-[13px] text-white">
       <nav>
         <div
-          className={` flex flex-wrap items-center justify-between ${
+          className={` flex flex-wrap justify-between  ${
             navbarOpen ? "pr-4" : "px-4"
           }`}
         >
@@ -54,15 +54,19 @@ const HeaderNav = () => {
                 <div className="bg-black flex flex-row gap-[30px]">
                   <li className="w-[105px] text-center h-[32px] border-button border-[1px] border-opacity-80 rounded-[15px] flex items-center justify-center bg-[#1A1A1A] font-bold uppercase">
                     <a
-                      href="https://aped-xyz.gitbook.io/litepaper"
-                      className="text-white"
+                      href="https://t.me/ApedTrade"
+                      target="_blank"
+                      className="text-white font-bold text-sm"
                     >
                       telegram
                     </a>
                   </li>
 
                   <li className="w-[105px] text-center text-[16px] border-button border-[1px] border-opacity-80 rounded-[15px] flex items-center justify-center bg-[#1A1A1A] font-bold uppercase">
-                    <a href="/contacts" className="text-white">
+                    <a
+                      href="/contacts"
+                      className="text-white font-bold text-sm"
+                    >
                       docs
                     </a>
                   </li>
@@ -71,26 +75,32 @@ const HeaderNav = () => {
                 <div className="bg-black fixed h-[100vh] w-full pl-8 z-50">
                   <div>
                     <a
-                      href="https://aped-xyz.gitbook.io/litepaper"
-                      className="text-center flex font-bold text-[32px]  text-white uppercase"
+                      href="https://t.me/ApedTrade"
+                      className="text-center flex font-bold text-[32px] text-white uppercase"
                     >
                       DOCS
                     </a>
                     <a
                       href="/contacts"
-                      className="text-center flex font-bold text-[32px]  text-white uppercase"
+                      className="text-center flex font-bold text-[32px] text-white uppercase"
                     >
                       CONTACT
                     </a>
                     <a
+                      href="https://t.me/ApedTrade"
+                      className="text-center flex font-bold text-[32px] text-white uppercase"
+                    >
+                      TELEGRAM
+                    </a>
+                    <a
                       href="https://twitter.com/aped_xyz"
-                      className="text-center flex font-bold text-[32px]  text-white uppercase"
+                      className="text-center flex font-bold text-[32px] text-white uppercase"
                     >
                       TWITTER
                     </a>
                     <a
                       href="https://discord.com/invite/FbFjCz4PAR"
-                      className="w-[105px] text-center flex font-bold text-[32px]  text-white uppercase"
+                      className="w-[105px] text-center flex font-bold text-[32px] text-white uppercase"
                     >
                       DISCORD
                     </a>
