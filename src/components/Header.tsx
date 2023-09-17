@@ -64,7 +64,7 @@ const HeaderNav = () => {
 
                   <li className="w-[105px] text-center text-[16px] border-button border-[1px] border-opacity-80 rounded-[15px] flex items-center justify-center bg-[#1A1A1A] font-bold uppercase">
                     <a
-                      href="/contacts"
+                      href="https://aped-xyz.gitbook.io/apedbot-docs/apedbot/introduction-to-apedbot"
                       className="text-white font-bold text-sm"
                     >
                       docs
@@ -75,7 +75,7 @@ const HeaderNav = () => {
                 <div className="bg-black fixed h-[100vh] w-full pl-8 z-50">
                   <div>
                     <a
-                      href="https://t.me/ApedTrade"
+                      href="https://aped-xyz.gitbook.io/apedbot-docs/apedbot/introduction-to-apedbot"
                       className="text-center flex font-bold text-[32px] text-white uppercase"
                     >
                       DOCS

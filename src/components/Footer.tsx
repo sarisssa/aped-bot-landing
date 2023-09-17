@@ -1,6 +1,7 @@
 import discord from "../assets/Footer/discord.svg";
 import logo from "../assets/Footer/logo.svg";
 import medium from "../assets/Footer/medium.svg";
+import telegram from "../assets/Footer/telegram.svg";
 import twitter from "../assets/Footer/twitter.svg";
 
 const Footer = () => {
@@ -31,7 +32,7 @@ const Footer = () => {
           </a>
           <a href="https://t.me/ApedTrade" target="_blank">
             <img
-              src={twitter}
+              src={telegram}
               alt=""
               className="ml-[23px] w-[40px] h-[34px]"
             ></img>
@@ -40,7 +41,7 @@ const Footer = () => {
 
         <div className="flex flex-row justify-center relative left-2.5 w-[208px] mt-[6px] gap-4">
           <a
-            href="https://aped-xyz.gitbook.io/litepaper"
+            href="https://aped-xyz.gitbook.io/apedbot-docs/apedbot/introduction-to-apedbot"
             target="_blank"
             className="text-[#F9F9FB] text-[18px] leading-[22px] font-[800] flex-none order grow-0"
           >
