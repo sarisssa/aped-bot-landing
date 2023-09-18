@@ -2,14 +2,20 @@ import discordBot from "./src/assets/TradeOnGoContainer/discord-bot.svg";
 import limitOrders from "./src/assets/TradeOnGoContainer/limit-orders.svg";
 import marketOrders from "./src/assets/TradeOnGoContainer/market-orders.svg";
 
-import assetVariety from "./src/assets/PersonalizedTradingContainer/asset-variety.svg";
-import bestAssetPrice from "./src/assets/PersonalizedTradingContainer/best-asset-price.svg";
-import lowestFees from "./src/assets/PersonalizedTradingContainer/lowest-fees.svg";
-import perpAggregator from "./src/assets/PersonalizedTradingContainer/perp-aggregator.svg";
+import assetVarietyIcon from "./src/assets/PersonalizedTradingContainer/asset-variety.svg";
+import bestAssetPriceIcon from "./src/assets/PersonalizedTradingContainer/best-asset-price.svg";
+import lowestFeesIcon from "./src/assets/PersonalizedTradingContainer/lowest-fees.svg";
+import perpAggregatorIcon from "./src/assets/PersonalizedTradingContainer/perp-aggregator.svg";
 
+import axios from "axios";
+import { useEffect, useState } from "react";
 import mobileABB from "./src/assets/ApedBotBackground/mobileBackground.png";
 import ABB from "./src/assets/ApedBotBackground/picture.png";
 import ApedBanana from "./src/assets/Leaderboard/apedBanana";
+import assetVarietyScreenshot from "./src/assets/ScreenshotMenu/assetVariety.gif";
+import bestAssetPriceScreenshot from "./src/assets/ScreenshotMenu/bestAssetPrice.png";
+import lowestFeesScreenshot from "./src/assets/ScreenshotMenu/lowestFees.png";
+import PerpAgg from "./src/assets/ScreenshotMenu/perpAgg.png";
 import FeatureButton from "./src/components/FeatureButton";
 import LeaderBoardRow from "./src/components/LeaderBoardRow";
 import { traderData } from "./src/mock";
@@ -19,6 +25,34 @@ export default function Home() {
     window.open("https://t.me/ApedTrad", "_blank");
   };
 
+  const [tradingVolume, setTradingVolume] = useState(0);
+  const [topRanked, setTopRanked] = useState([]);
+  const bananaPoints = tradingVolume / 100;
+
+  const [menuVideo, setMenuVideo] = useState(
+    "https://streamable.com/e/1lfuvi?quality=highest"
+  );
+  const [screenshot, setScreenshot] = useState(PerpAgg);
+
+  async function getTotalTradingVolume() {
+    try {
+      const totalTradingVolumeEndpoint =
+        "https://api2.aped.xyz/totaltradingvolume";
+      const leaderBoardEndpoint = "https://api2.aped.xyz/leaderboard/pnl";
+      const totalVolumeResponse = await axios.get(totalTradingVolumeEndpoint);
+
+      totalVolumeResponse.data === "no trades yet"
+        ? setTradingVolume(0)
+        : setTradingVolume(totalVolumeResponse.data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  useEffect(() => {
+    getTotalTradingVolume();
+  }, []);
+
   return (
     <>
       <div className="header-banner font-sans">
@@ -26,7 +60,7 @@ export default function Home() {
           id="black-circle"
           className="flex flex-col items-center header-banner-text"
         >
-          <span className="font-extrabold mb-5 text-3xl">APED BOT</span>
+          <span className="font-extrabold mb-5 text-4xl">APED BOT</span>
           <span className="font-bold mb-3">A NEW WAY TO TRADE PERPS</span>
           <button
             className="font-bold md:max-w-[20vw] rounded-xl z-10"
@@ -77,12 +111,12 @@ export default function Home() {
           className="flex justify-between flex-col md:flex-row"
         >
           <div className="flex flex-col bg-container px-3 pt-6 pb-3 md:ml-6 mb-5 md:mb-0 rounded-xl min-w-[20vw]">
-            <span className="font-bold text-4xl">$1,234,567</span>
+            <span className="font-bold text-4xl">${tradingVolume}</span>
             <span className="font-semibold">Total Trading Volume</span>
           </div>
           <div className="flex flex-col items-center bg-container px-3 pt-6 pb-3 md:mr-6 rounded-xl min-w-[20vw]">
             <div className="flex items-center">
-              <span className="font-bold text-4xl pl-3">1,234,567</span>
+              <span className="font-bold text-4xl pl-3">{bananaPoints}</span>
               <ApedBanana />
             </div>
             <span className="font-semibold">Banana Points Earned</span>
@@ -120,8 +154,24 @@ export default function Home() {
               id="button-container"
               className="flex flex-col items-center text-left pb-10"
             >
-              <FeatureButton imageURL={limitOrders} text={"LIMIT ORDERS"} />
-              <FeatureButton imageURL={marketOrders} text={"MARKET ORDERS"} />
+              <FeatureButton
+                imageURL={limitOrders}
+                text={"LIMIT ORDERS"}
+                onClick={() =>
+                  setMenuVideo(
+                    "https://streamable.com/e/1lfuvi?quality=highest"
+                  )
+                }
+              />
+              <FeatureButton
+                imageURL={marketOrders}
+                text={"MARKET ORDERS"}
+                onClick={() =>
+                  setMenuVideo(
+                    "https://streamable.com/e/j6c9cy?quality=highest"
+                  )
+                }
+              />
               <FeatureButton imageURL={discordBot} text={"DISCORD BOT"} />
             </div>
             <div
@@ -139,9 +189,7 @@ export default function Home() {
                 }}
               >
                 <iframe
-                  src={
-                    "https://www.youtube.com/watch?v=nakD3upngv8&ab_channel=JacksonvilleJaguars"
-                  }
+                  src={menuVideo}
                   frameBorder="0"
                   width="100%"
                   height="100%"
@@ -190,18 +238,16 @@ export default function Home() {
                 }}
                 className="mb-5 md:mb-0"
               >
-                <iframe
-                  src="https://www.youtube.com/watch?v=nakD3upngv8&ab_channel=JacksonvilleJaguars"
-                  frameBorder="0"
+                <img
+                  src={screenshot}
                   width="100%"
                   height="100%"
-                  allowFullScreen
                   style={{
                     width: "100%",
                     height: "100%",
                     position: "absolute",
                   }}
-                ></iframe>
+                ></img>
               </div>
             </div>
             <div
@@ -209,15 +255,25 @@ export default function Home() {
               className="flex flex-col items-center mb-10"
             >
               <FeatureButton
-                imageURL={perpAggregator}
+                imageURL={perpAggregatorIcon}
                 text={"PERP AGGREGATOR"}
+                onClick={() => setScreenshot(PerpAgg)}
               />
               <FeatureButton
-                imageURL={bestAssetPrice}
+                imageURL={bestAssetPriceIcon}
                 text={"BEST ASSET PRICE"}
+                onClick={() => setScreenshot(bestAssetPriceScreenshot)}
               />
-              <FeatureButton imageURL={lowestFees} text={"LOWEST FEES"} />
-              <FeatureButton imageURL={assetVariety} text={"ASSET VARIETY"} />
+              <FeatureButton
+                imageURL={lowestFeesIcon}
+                text={"LOWEST FEES"}
+                onClick={() => setScreenshot(lowestFeesScreenshot)}
+              />
+              <FeatureButton
+                imageURL={assetVarietyIcon}
+                text={"ASSET VARIETY"}
+                onClick={() => setScreenshot(assetVarietyScreenshot)}
+              />
             </div>
           </div>
         </div>

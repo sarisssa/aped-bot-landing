@@ -182,3 +182,9 @@ button:focus-visible {
     display: block;
   }
 }
+
+@media (min-width: 2000px) {
+  #black-circle {
+    padding-top: 8%; /* Increase padding for wide screens */
+  }
+}

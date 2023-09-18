@@ -4,6 +4,17 @@ import APED_LOGO from "../assets/Header/logo.svg";
 const HeaderNav = () => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
 
+  const navigatetoTelegram = () => {
+    window.open("https://t.me/ApedTrad", "_blank");
+  };
+
+  const navigatetoDocs = () => {
+    window.open(
+      "https://aped-xyz.gitbook.io/apedbot-docs/apedbot/introduction-to-apedbot",
+      "_blank"
+    );
+  };
+
   return (
     <div className="header fixed top-0 left-0 right-0 z-[100] bg-black py-[13px] text-white">
       <nav>
@@ -49,10 +60,13 @@ const HeaderNav = () => {
             } w-full md:block md:w-auto`}
             id="navbar-default"
           >
-            <ul className="font-medium flex flex-col  md:p-0 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+            <ul className="font-medium flex flex-col md:p-0 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
               {!navbarOpen ? (
-                <div className="bg-black flex flex-row gap-[30px]">
-                  <li className="w-[105px] text-center h-[32px] border-button border-[1px] border-opacity-80 rounded-[15px] flex items-center justify-center bg-[#1A1A1A] font-bold uppercase">
+                <div className="bg-black flex flex-row cursor-pointer gap-[30px]">
+                  <li
+                    onClick={navigatetoTelegram}
+                    className="w-[105px] text-center h-[32px] border-button border-[1px] border-opacity-80 rounded-[15px] flex items-center justify-center bg-[#1A1A1A] font-bold uppercase"
+                  >
                     <a
                       href="https://t.me/ApedTrade"
                       target="_blank"
@@ -62,7 +76,10 @@ const HeaderNav = () => {
                     </a>
                   </li>
 
-                  <li className="w-[105px] text-center text-[16px] border-button border-[1px] border-opacity-80 rounded-[15px] flex items-center justify-center bg-[#1A1A1A] font-bold uppercase">
+                  <li
+                    onClick={navigatetoDocs}
+                    className="w-[105px] text-center text-[16px] border-button border-[1px] border-opacity-80 rounded-[15px] flex items-center justify-center bg-[#1A1A1A] font-bold uppercase"
+                  >
                     <a
                       href="https://aped-xyz.gitbook.io/apedbot-docs/apedbot/introduction-to-apedbot"
                       target="_blank"
