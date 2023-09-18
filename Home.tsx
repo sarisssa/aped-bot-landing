@@ -51,7 +51,7 @@ export default function Home() {
         <div className="flex justify-center">
           <div
             id="embed-vid-div"
-            className="justify-center min-w-[60vw] min-h-[40vh] rounded-xl text-center "
+            className="justify-center min-w-[60vw] md:min-h-[40vh] rounded-xl text-center "
           >
             <div
               style={{
@@ -118,7 +118,7 @@ export default function Home() {
           >
             <div
               id="button-container"
-              className="flex flex-col items-center pb-10"
+              className="flex flex-col items-center text-left pb-10"
             >
               <FeatureButton imageURL={limitOrders} text={"LIMIT ORDERS"} />
               <FeatureButton imageURL={marketOrders} text={"MARKET ORDERS"} />
@@ -139,7 +139,9 @@ export default function Home() {
                 }}
               >
                 <iframe
-                  src="https://streamable.com/e/j0mncn?quality=highest"
+                  src={
+                    "https://www.youtube.com/watch?v=nakD3upngv8&ab_channel=JacksonvilleJaguars"
+                  }
                   frameBorder="0"
                   width="100%"
                   height="100%"
@@ -173,10 +175,10 @@ export default function Home() {
           >
             <div
               id="perp-aggregator"
-              className="flex flex-col text-center md:text-left order-0 md-order-1"
+              className="flex flex-col text-left md:text-left"
             >
-              <h3 className="font-bold text-xl">PERP AGGREGATOR</h3>
-              <span className="mb-5">
+              <h3 className="font-bold text-xl test2">PERP AGGREGATOR</h3>
+              <span className="mb-5 test">
                 AGGREGATED LIQUIDITY - MINIMAL SLIPPAGE - INTELLIGENT EXECUTION
               </span>
               <div
@@ -189,7 +191,7 @@ export default function Home() {
                 className="mb-5 md:mb-0"
               >
                 <iframe
-                  src="https://streamable.com/e/j0mncn?quality=highest"
+                  src="https://www.youtube.com/watch?v=nakD3upngv8&ab_channel=JacksonvilleJaguars"
                   frameBorder="0"
                   width="100%"
                   height="100%"
@@ -202,7 +204,10 @@ export default function Home() {
                 ></iframe>
               </div>
             </div>
-            <div id="button-container" className="flex flex-col items-center">
+            <div
+              id="button-container"
+              className="flex flex-col items-center mb-10"
+            >
               <FeatureButton
                 imageURL={perpAggregator}
                 text={"PERP AGGREGATOR"}
@@ -234,7 +239,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
     </>
   );
 }

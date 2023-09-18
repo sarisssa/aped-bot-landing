@@ -65,6 +65,7 @@ const HeaderNav = () => {
                   <li className="w-[105px] text-center text-[16px] border-button border-[1px] border-opacity-80 rounded-[15px] flex items-center justify-center bg-[#1A1A1A] font-bold uppercase">
                     <a
                       href="https://aped-xyz.gitbook.io/apedbot-docs/apedbot/introduction-to-apedbot"
+                      target="_blank"
                       className="text-white font-bold text-sm"
                     >
                       docs

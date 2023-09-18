@@ -1,5 +1,13 @@
 import "./App.css";
 
+import "@fontsource/barlow";
+import "@fontsource/barlow/400-italic.css";
+import "@fontsource/barlow/400.css";
+import "@fontsource/barlow/700-italic.css";
+import "@fontsource/barlow/700.css";
+import "@fontsource/barlow/900-italic.css";
+import "@fontsource/barlow/900.css";
+
 import discordBot from "./assets/TradeOnGoContainer/discord-bot.svg";
 import limitOrders from "./assets/TradeOnGoContainer/limit-orders.svg";
 import marketOrders from "./assets/TradeOnGoContainer/market-orders.svg";

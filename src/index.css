@@ -91,6 +91,10 @@ button:focus-visible {
   text-align: inherit;
 }
 
+#button-container {
+  margin-bottom: 3rem;
+}
+
 .header-banner {
   position: relative;
   margin-top: 64px;
@@ -99,7 +103,7 @@ button:focus-visible {
 
 @media screen and (max-width: 768px) {
   .header-banner {
-    margin-top: 10rem; /* Apply a margin-top of 150px on screens with a maximum width of 768px (typical mobile screens) */
+    margin-top: 12rem; /* Apply a margin-top of 150px on screens with a maximum width of 768px (typical mobile screens) */
   }
 }
 
@@ -146,6 +150,24 @@ button:focus-visible {
 
   #entire-website-container {
     margin-top: 10em;
+  }
+
+  #embed-vid-div {
+    min-width: 80vw;
+  }
+
+  #perp-aggregator {
+    flex-direction: column-reverse;
+    text-align: left;
+    order: 1;
+  }
+
+  .test {
+    order: 1;
+  }
+
+  .test2 {
+    order: 2;
   }
 }
 

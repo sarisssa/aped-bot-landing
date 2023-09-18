@@ -49,12 +49,14 @@ const Footer = () => {
           </a>
           <a
             href="/terms-of-service"
+            target="_blank"
             className="text-[#F9F9FB] text-[18px] leading-[22px] font-[800] flex-none order grow-0"
           >
             TERMS OF SERVICE
           </a>
           <a
             href="/private-policy"
+            target="_blank"
             className="text-[#F9F9FB] text-[18px] leading-[22px] font-[800] flex-none order grow-0"
           >
             PRIVATE POLICY
